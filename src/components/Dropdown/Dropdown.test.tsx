@@ -9,8 +9,10 @@ test("Checks if the button is fully active", () => {
 });
 
 test("Check if the button changes when disabled", () => {
-  render(<Dropdown id="False ID" optionA="Value3" optionB="Value4" />);
+  render(<Dropdown id="False ID" optionA="Value3" optionB="Value4" disabled />);
 
-  expect(screen.getByText("Value3")).toHaveStyle("background-color: #cccccc");
-  expect(screen.getByText("Value3")).toHaveStyle("cursor: not-allowed");
+  expect(screen.getByTestId("dropdown")).toHaveStyle(
+    "background-color: #cccccc",
+  );
+  expect(screen.getByTestId("dropdown")).toHaveStyle("cursor: not-allowed");
 });

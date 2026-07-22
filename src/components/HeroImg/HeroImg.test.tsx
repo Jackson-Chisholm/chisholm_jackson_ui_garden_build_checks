@@ -11,6 +11,8 @@ test("Checks if the Hero Image is fully active", () => {
 test("Check if the Hero Image changes when disabled", () => {
   render(<HeroImg src="off.png" alt="dos" disabled />);
 
-  expect(screen.getByAltText("dos")).toHaveStyle("background-color: #cccccc");
-  expect(screen.getByAltText("dos")).toHaveStyle("cursor: not-allowed");
+  expect(screen.getByTestId("hero-image")).toHaveStyle(
+    "background-color: #cccccc",
+  );
+  expect(screen.getByTestId("hero-image")).toHaveStyle("cursor: not-allowed");
 });

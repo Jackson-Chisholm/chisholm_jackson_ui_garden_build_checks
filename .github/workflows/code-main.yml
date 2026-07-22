@@ -3,7 +3,6 @@ name: "Quality Check"
 on:
   push:
   pull_request:
-  
 
 jobs:
   check:
@@ -15,7 +14,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          
+
       - name: Runs Prettier Check
         run: npx prettier -c .
 

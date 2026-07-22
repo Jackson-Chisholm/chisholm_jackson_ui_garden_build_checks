@@ -11,8 +11,6 @@ test("Checks if the button is fully active", () => {
 test("Check if the button changes when disabled", () => {
   render(<Table disabled />);
 
-  expect(screen.getByText("Makoto Yuki")).toHaveStyle(
-    "background-color: #cccccc",
-  );
-  expect(screen.getByText("Makoto Yuki")).toHaveStyle("cursor: not-allowed");
+  expect(screen.getByTestId("table")).toHaveStyle("background-color: #cccccc");
+  expect(screen.getByTestId("table")).toHaveStyle("cursor: not-allowed");
 });

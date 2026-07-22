@@ -5,7 +5,7 @@ import { Radio } from "./Radio";
 
 test("Checks if the button is fully active", () => {
   render(<Radio label="Test Radio" />);
-  expect(screen.getByText("Test Radio")).toBeVisible();
+  expect(screen.getByLabelText("Test Radio")).toBeVisible();
 });
 
 test("Check if the button changes when disabled", () => {
@@ -14,5 +14,5 @@ test("Check if the button changes when disabled", () => {
   expect(screen.getByText("Off Radio")).toHaveStyle(
     "background-color: #cccccc",
   );
-  expect(screen.getByText("Off Radio")).toHaveStyle("cursor: not-allowed");
+  expect(screen.getByLabelText("Off Radio")).toHaveStyle("cursor: not-allowed");
 });

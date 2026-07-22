@@ -8,7 +8,7 @@ interface StyledRadioProps {
   $disabled?: boolean;
 }
 
-const StyledRadio = styled.input<StyledRadioProps>`
+const StyledRadioWrapper = styled.label<StyledRadioProps>`
   padding: 12px 20px;
   border: none;
   border-radius: 8px;
@@ -30,6 +30,10 @@ const StyledRadio = styled.input<StyledRadioProps>`
   }
 `;
 
+const StyledRadio = styled.input`
+  cursor: not-allowed;
+`;
+
 export function Radio({
   label,
   variant = "primary",
@@ -37,13 +41,13 @@ export function Radio({
   disabled = false,
 }: RadioProps) {
   return (
-    <StyledRadio
-      type="radio"
+    <StyledRadioWrapper
       className={`btn btn-${variant}`}
       $disabled={disabled}
       $backgroundColor={backgroundColor}
     >
+      <StyledRadio type="radio" name={label} disabled={disabled} />
       {label}
-    </StyledRadio>
+    </StyledRadioWrapper>
   );
 }

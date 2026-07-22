@@ -60,6 +60,7 @@ export function Table({
       className={`btn btn-${variant}`}
       $disabled={disabled}
       $backgroundColor={backgroundColor}
+      data-testid="table"
     >
       <h1>{title}</h1>
       <StyledTable>

@@ -44,6 +44,7 @@ export function Dropdown({
       className={`btn btn-${variant}`}
       $disabled={disabled}
       $backgroundColor={backgroundColor}
+      data-testid="dropdown"
     >
       <option value={optionA}>{optionA}</option>
       <option value={optionB}>{optionB}</option>

@@ -53,6 +53,7 @@ export function Card({
       className={`btn btn-${variant}`}
       $disabled={disabled}
       $backgroundColor={backgroundColor}
+      data-testid="card"
     >
       <CardTitle>{title}</CardTitle>
       <CardText>{label}</CardText>

@@ -54,6 +54,7 @@ export function HeroImg({
       className={`btn btn-${variant}`}
       $disabled={disabled}
       $backgroundColor={backgroundColor}
+      data-testid="hero-image"
     >
       <HeroText>Come Check this out!</HeroText>
       <HeroImage src={src} alt={alt}></HeroImage>
